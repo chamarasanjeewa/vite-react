@@ -1,10 +1,13 @@
+
 name: Vite prod deployment
+
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 # on: [push]
 on:
   workflow_dispatch:
     branches:
       - new-branch
+
 jobs:
   build:
     runs-on: ubuntu-latest
