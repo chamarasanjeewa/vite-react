@@ -28,6 +28,7 @@ jobs:
 
       - name: Build application for dev
         run: yarn run build
+        
       - name: Deploying backoffice to dev console
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
