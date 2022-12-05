@@ -5,9 +5,9 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
     branches:
-      - new-branch
+      - main
 env:
-  VITE_ENVIRONMENT2: ${{ secrets.VITE_ENVIRONMENT2 }}
+  VITE_ENVIRONMENT2: the_secret
 
 jobs:
   build:
@@ -39,10 +39,12 @@ jobs:
 
       - name: Build application for dev
         run: yarn build
+        env:
+          VITE_ENVIRONMENT2: the_secret
 
-      # - uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: "${{ secrets.GITHUB_TOKEN }}"
-      #     firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}"
-      #     channelId: live
-      #     projectId: vite-host
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}"
+          channelId: live
+          projectId: vite-host
