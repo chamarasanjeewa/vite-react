@@ -29,10 +29,10 @@ jobs:
       - name: Build application for dev
         run: yarn run build
 
-      - name: Deploying backoffice to dev console
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-         firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}'
-         channelId: live
-         projectId: vite-host
+      # - name: Deploying backoffice to dev console
+      #   uses: FirebaseExtended/action-hosting-deploy@v0
+      #   with:
+      #     repoToken: "${{ secrets.GITHUB_TOKEN }}"
+      #    firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}'
+      #    channelId: live
+      #    projectId: vite-host
