@@ -6,13 +6,11 @@ on:
   workflow_dispatch:
     branches:
       - main
-env:
-  VITE_ENVIRONMENT2: the_secret
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: production
+    environment:development 
     env:
       CI: false
       NODE_OPTIONS: --max_old_space_size=4096
