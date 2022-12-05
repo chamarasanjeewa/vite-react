@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  console.log("env", import.meta.env.VITE_ENVIRONMENT);
+  console.log("env", import.meta.env.VITE_ENVIRONMENT2);
   console.log("updated...");
   return (
     <div className="App">
