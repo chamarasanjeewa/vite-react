@@ -7,8 +7,10 @@ on:
   workflow_dispatch:
     branches:
       - new-branch
+env:
+  VITE_ENVIRONMENT2: ${{ secrets.VITE_ENVIRONMENT2 }}
 
-jobs:
+jobs: 
   build:
     runs-on: ubuntu-latest
     environment: production
@@ -37,8 +39,6 @@ jobs:
 
       - name: Build application for dev
         run: yarn build
-        env: 
-          VITE_ENVIRONMENT2:"${{ secrets.VITE_ENVIRONMENT2 }}"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
