@@ -27,7 +27,7 @@ jobs:
         run: yarn install
 
       - name: Build application for dev
-        run: yarn run build
+        run: yarn build
       - name: Deploying backoffice to dev console
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
