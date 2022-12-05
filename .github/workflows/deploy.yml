@@ -2,8 +2,9 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
- build:
+  build:
     runs-on: ubuntu-latest
+    environment: production
     env:
       CI: false
       NODE_OPTIONS: --max_old_space_size=4096
@@ -31,7 +32,7 @@ jobs:
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_VITE_HOST }}"
           channelId: live
           projectId: vite-host
