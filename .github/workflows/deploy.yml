@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
     branches:
       - main
+env:
+  VITE_ENVIRONMENT2: the_secret
 
 jobs:
   build:
