@@ -1,3 +1,10 @@
-
 ### This is pull request template
-[] working
+## TaskId:[LA45](http://url)
+
+### Checklist:
+* [ ] Changes build without any errors
+* [ ] Done developer testing in
+  - [ ] Chrome
+  - [ ] Firefox
+  - [ ] Safari
+* [ ] Have written test cases
